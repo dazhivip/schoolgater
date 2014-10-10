@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  GlassShop
+
+  Created by Sense on 14-7-12.
+  Copyright (c) 2014年 Sense. All rights reserved.
+*/
+"webfail"="服务器出错啦";
+"Photo Album" = "从相册选择";
+"Camera" = "拍照";
+"Cancel" = "取消";
+
+//网络问题
+"network.ex"="暂无网络";
+"server.error"="服务器异常";
+"serverData.error"="返回数据错误";
+"loging"="登录中...";
+"loading"="数据加载中...";
+"requestFailed"="请求服务器失败";
+"net.timeout"="请求服务器超时";
+"noData" = "暂时没有数据";
+"no.resource" = "资源已经不存在";
+"no.permission" = "您无权限查看该资源";
+"auth.failed" = "认证失败";
+"client.error" = "客户端请求错误";

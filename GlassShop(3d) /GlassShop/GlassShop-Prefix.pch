@@ -1,0 +1,53 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+#import "LogicGlobalDefine.h"
+#import "LogicManager.h"
+#import "AFNetworking.h"
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+#endif
+
+//判断是否是Iphone5的宏
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define kLISTY (280+64)
+#define kLISTHEIGHT ([UIScreen mainScreen].bounds.size.height-kLISTY)
+
+//IOS7
+#define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define kSCREENWIDTH ([UIScreen mainScreen].bounds.size.width)
+#define kSCREENHEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#ifdef DEBUG
+
+#define CLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+#define KKeyBoardH
+
+#else
+
+#define CLog(format, ...)
+#endif
+
+
+/**
+ *  网络webRequest用
+ *
+ *
+ */
+#define ERROR_INFO(ErrorDomain,ErrorCode,ErroeDescript) [[NSError alloc] initWithDomain:[NSString stringWithFormat:ErrorDomain] code:ErrorCode userInfo:[NSDictionary dictionaryWithObject:ErroeDescript forKey:NSLocalizedDescriptionKey]];
+
+#define ERROR_NOINFO(ErrorDomain,ErrorCode) [[NSError alloc] initWithDomain:[NSString stringWithFormat:ErrorDomain] code:ErrorCode userInfo:nil];
+
+#define ERROR_DICTINFO(ErrorDomain,ErrorCode,ErroeDictionary) [[NSError alloc] initWithDomain:[NSString stringWithFormat:ErrorDomain] code:ErrorCode userInfo:ErroeDictionary];
+
+#define BILI (7.0f / 8.0f)
